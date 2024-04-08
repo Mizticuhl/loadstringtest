@@ -1,0 +1,64 @@
+local Alphabet1 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet2 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet3 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet4 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet5 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet6 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet7 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet8 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet9 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Alphabet10 = {"A","a","B","b","C","c","D","d","E","e","F","f","G","g","H","h","I","i","J","j","K","k","L","l","M","m","N","n","O","o","P","p","Q","q","R","r","S","s","T","t","U","u","V","v","W","w","X","x","Y","y","Z","z"}
+local Symbol1 = {"!","@","#","$","%","^","&","*","(",")","_","-"}
+local Symbol2 = {"!","@","#","$","%","^","&","*","(",")","_","-"}
+local Symbol3 = {"!","@","#","$","%","^","&","*","(",")","_","-"}
+local Symbol4 = {"!","@","#","$","%","^","&","*","(",")","_","-"}
+local Symbol5 = {"!","@","#","$","%","^","&","*","(",")","_","-"}
+
+local Number1 = math.random(1,100)
+local Number2 = math.random(1,100)
+local Number3 = math.random(1,100)
+local Number4 = math.random(1,100)
+local Number5 = math.random(1,100)
+
+local A1 = Alphabet1[math.random(1, #Alphabet1)]
+local A2 = Alphabet2[math.random(1, #Alphabet2)]
+local A3 = Alphabet3[math.random(1, #Alphabet3)]
+local A4 = Alphabet4[math.random(1, #Alphabet4)]
+local A5 = Alphabet5[math.random(1, #Alphabet5)]
+local A6 = Alphabet6[math.random(1, #Alphabet6)]
+local A7 = Alphabet7[math.random(1, #Alphabet7)]
+local A8 = Alphabet8[math.random(1, #Alphabet8)]
+local A9 = Alphabet9[math.random(1, #Alphabet9)]
+local A10 = Alphabet10[math.random(1, #Alphabet10)]
+
+local S1 = Symbol1[math.random(1, #Symbol1)]
+local S2 = Symbol2[math.random(1, #Symbol2)]
+local S3 = Symbol3[math.random(1, #Symbol3)]
+local S4 = Symbol4[math.random(1, #Symbol4)]
+local S5 = Symbol5[math.random(1, #Symbol5)]
+
+local Version = "1.0"
+
+local function STATUS()
+  if Settings.PasswordGenerator == true then
+    print("Online")
+  else
+    print("Offline")
+end
+end
+
+local function TEXT()
+  print("Mizt's Password Generator:")
+  print("--------------------------------------------------------")
+  print("Version: "..Version)
+  print("--------------------------------------------------------")
+  STATUS()
+print("--------------------------------------------------------")
+end
+
+if Settings.PasswordGenerator == true then
+  TEXT()
+  print("Password: "..A1..A2..Number1..S1..A3..A4..Number2..S2..A5..A6..Number3..S3..A7..A8..Number4..S4..A9..A10..Number5..S5)
+else
+  TEXT()
+end
